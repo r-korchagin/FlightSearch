@@ -1,0 +1,52 @@
+﻿<html>
+<head>
+  <title>Search Flight</title>
+  <script src="/js/jquery.min.js"></script>
+  <link rel="stylesheet" href="/style/bootstrap.min.css">
+  <link rel="stylesheet" href="/style/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="/style/searchform.css">
+  <link rel="stylesheet" href="/style/select2.min.css">
+  <link rel="stylesheet" href="/style/bootstrap-datetimepicker.min.css">
+  <script src="/js/bootstrap.min.js"></script>
+  <script src="/js/select2.min.js"></script>
+  <script src="/js/searchForm.js"></script>
+  <script src="/js/moment.js"></script>
+  <script src="/js/bootstrap-datetimepicker.min.js"></script>
+</head>
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+			  <a class="navbar-brand" href="/">Flight search</a>
+			</div>
+			<ul class="nav navbar-nav">
+			  <li class="active"><a href="#" id="search-btn">Search</a></li>
+			  <li><a href="#" id="airlines-btn">Airlines</a></li>
+			  <li><a href="#" id="airports-btn">Airports</a></li>
+			</ul>
+		</div>
+	</nav>
+	<div class="container-fluid">
+		<div class="row">
+			<section class="background">
+				<div id="search-content"></div>
+			</section>
+			<section class="background">
+				<div class="content-wrapper">
+					<p class="content-subtitle"> Airlines </p>
+					<div id="airlines-content">
+
+					</div>
+				</div>
+			</section>
+				<section class="background">
+					<div class="content-wrapper">
+					<p class="content-subtitle"> Airports </p>			
+					<div id="airports-content">
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+	</body>
+</html>

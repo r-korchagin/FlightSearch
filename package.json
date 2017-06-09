@@ -1,0 +1,21 @@
+{
+  "name": "flightsearch",
+  "version": "0.0.1",
+  "description": "Test Project for flight search",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "flight",
+    "search"
+  ],
+  "author": "Roman Korchagin",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "moment": "^2.18.1",
+    "winston": "^2.3.1",
+    "express": "^4.15",
+    "serve-favicon": "^0.17.7"
+  }
+}
