@@ -17,7 +17,7 @@ module.exports = {
           
           // DB Link
           
-          DBLINK:  "mongodb://flight:flightsearch3485@ds163681.mlab.com:63681/flightsearch", 
+          DBLINK:  "mongodb://db_user_name:db_user_pass@mongo_server:mongo_port/flightsearch", 
           
           // System Name
           
