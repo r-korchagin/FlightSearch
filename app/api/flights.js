@@ -45,7 +45,6 @@
      if (req.query.to){
          query.where("finish.airportCode").equals(req.query.to);
      }
-     
      // Search in DB
     db.flight
       .find(query)
@@ -59,7 +58,6 @@
           res.json([]); 
           return;
         }
-        
         res.json(flightList);
         
       });

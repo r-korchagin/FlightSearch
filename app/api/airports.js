@@ -13,7 +13,19 @@
  
  var getAirports = function (req, res) {
      
-     var query = (req.query.q)? { $text: { $search : req.query.q } } : {};
+     var query = db.airport.find({});
+     
+     if (req.query.q){
+        try {
+            var containReg = new RegExp(req.query.q,"ig");
+            query.where("airportName").regex(containReg);
+        } catch(e){
+            logger.error("RegExp Error. Query string:"
+            +req.query.q+" e:"+e);
+        }
+     }
+    //     var query = (req.query.q)? { $text: { $search : req.query.q } } : {};
+     
      
      db.airport
       .find(query)
