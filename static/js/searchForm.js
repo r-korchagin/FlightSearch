@@ -145,7 +145,9 @@ function searchButtonEvent() {
                 objects.forEach(function(item) {
                     resultArr = resultArr.concat(item[0]);
                 });
+                // if empty result, render Empty View
                 if (resultArr.length === 0) renderContent("#search-result", viewFS.searchEmptyResultView);
+                // Render search result View
                 else renderContent("#search-result", viewFS.flightSearchResultView, resultArr);
             }, 
             // fail Callback function
@@ -247,25 +249,4 @@ function initDatePicker(){
 }
 
 
-/**
- Solution to get back an actual array instead of a pseudo-array
- in construction $.when.apply($, deferreds).then(function( Result1, Result2 ... ){})
- No need with alternative search
-*/
-if (typeof $.when.all === 'undefined') {
-    $.when.all = function(deferreds) {
-        var toArray = function(args) {
-            return deferreds.length > 1 ? $.makeArray(args) : [args];
-        };
-        return $.Deferred(function(def) {
-            $.when.apply($, deferreds).then(
-                function() {
-                    def.resolveWith(this, [toArray(arguments)]);
-                },
-                function() {
-                    def.rejectWith(this, [toArray(arguments)]);
-                });
-        });
-    };
-}
 
