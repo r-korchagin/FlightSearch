@@ -109,12 +109,11 @@ function controllerAirportsTable() {
 /** 
  * Render View
  *   @selector - Selector
- *   @view     - View function
+ *   @view     - View
  *   @data     - View data
 */
 function renderContent(selector, view, data){
-    $(selector).empty();
-    $(selector).append(view(data));
+    $(selector).html(view(data));
 }
 
 /**
@@ -166,7 +165,7 @@ function searchButtonEvent() {
 
 
 /**
-Init event with ajax request with search like "airports?q=Melbourne" for Select FROM and TO 
+Init select2 with ajax 
     @to - Not necessary String to set placeholder in Select TO. Type: String
     @from - Not necessary String to set placeholder in Select TO. Type: String
 */

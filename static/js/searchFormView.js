@@ -79,8 +79,8 @@ Function return html for empty searching result
 */
 searchEmptyResultView : function() {
    return "\
-            <p class=\"content-subtitle\">Can not find anything by your request!</p>\
-            <p class=\"content-subtitle\">Try to find again!</p>\
+            <p class=\"content-subtitle\">Can not find anything by your request</p>\
+            <p class=\"content-subtitle\">Try to find again</p>\
    "; 
 },
 
