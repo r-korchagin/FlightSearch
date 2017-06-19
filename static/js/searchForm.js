@@ -137,6 +137,8 @@ function searchButtonEvent() {
         
         controllerTopSearchForm(to, from, date);
         
+        $('html,body').css('cursor','wait');
+        
         modelFS.modelSearchResult(from, to, date, 
             // done Callback function
             function(objects) {
@@ -149,11 +151,13 @@ function searchButtonEvent() {
                 if (resultArr.length === 0) renderContent("#search-result", viewFS.searchEmptyResultView);
                 // Render search result View
                 else renderContent("#search-result", viewFS.flightSearchResultView, resultArr);
+                $('html,body').css('cursor','auto');
             }, 
             // fail Callback function
             function(jqXHR, textStatus) {
                 // handler error
                 errorHandler("#search-result", jqXHR, textStatus);
+                $('html,body').css('cursor','auto');
             }
         );
 
